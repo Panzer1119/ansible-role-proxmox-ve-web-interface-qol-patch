@@ -1,0 +1,9 @@
+---
+- name: "Replace a line in pvemanagerlib.js"
+  replace:
+    path: "/usr/share/pve-manager/js/pvemanagerlib.js"
+    regexp: "if (item.parent && idhash[item.parent]) {" #TODO Check if there is only 1 line matching this!
+    replace: "if (item.parent && idhash[item.parent] && false) {" #TODO Replace the whole expression with "false"
+    backup: true
+  notify: "Restart PVE Proxy"
+

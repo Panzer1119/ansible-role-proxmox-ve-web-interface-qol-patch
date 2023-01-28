@@ -1,2 +1,3 @@
 ---
-# defaults file for web-interface-qol-patch
+disable_no_subscription_warning: true
+flatten_snapshot_tree: true

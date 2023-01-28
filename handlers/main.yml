@@ -1,2 +1,6 @@
 ---
-# handlers file for web-interface-qol-patch
+- name: "Restart PVE Proxy"
+  service:
+    name: "pveproxy"
+    state: "restarted"
+    

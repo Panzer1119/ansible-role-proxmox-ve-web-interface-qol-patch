@@ -1,2 +1,11 @@
 ---
-# tasks file for web-interface-qol-patch
+- name: "Disable the No-Subscription-Warning"
+  include_tasks:
+    file: "disable-no-subscription-warning.yml"
+  when: "disable_no_subscription_warning"
+
+- name: "Flatten the Snapshot Tree"
+  include_tasks:
+    file: "flatten-snapshot-tree.yml"
+  when: "flatten_snapshot_tree"
+
