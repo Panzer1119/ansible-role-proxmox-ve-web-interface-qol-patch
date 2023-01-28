@@ -2,7 +2,7 @@
 - name: "Replace a line in proxmoxlib.js"
   replace:
     path: "/usr/share/javascript/proxmox-widget-toolkit/proxmoxlib.js"
-    regexp: ".data.status.toLowerCase() !== 'active') {" #TODO Check if there is only 1 line matching this!
-    replace: ".data.status.toLowerCase() !== 'active' && false) {" #TODO Replace the whole expression with "false"
+    regexp: '\.data\.status\.toLowerCase\(\) !== .active.\) \{'
+    replace: ".data.status.toLowerCase() !== 'active' && false) {"
     backup: true
   notify: "Restart PVE Proxy"
