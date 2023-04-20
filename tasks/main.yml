@@ -9,3 +9,7 @@
     file: "flatten-snapshot-tree.yml"
   when: "flatten_snapshot_tree"
 
+- name: "Add CPU Temperature to Summary"
+  include_tasks:
+    file: "add-cpu-temperature-to-summary.yml"
+  when: "add_cpu_temperature_to_summary"
