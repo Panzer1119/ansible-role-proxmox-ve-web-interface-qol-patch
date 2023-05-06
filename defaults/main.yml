@@ -2,3 +2,4 @@
 disable_no_subscription_warning: true
 flatten_snapshot_tree: true
 add_cpu_temperature_to_summary: false
+uncolor_irrelevant_critical_icons: true

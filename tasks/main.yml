@@ -13,3 +13,8 @@
   include_tasks:
     file: "add-cpu-temperature-to-summary.yml"
   when: "add_cpu_temperature_to_summary"
+
+- name: "Uncolor Irrelevant Critical Icons"
+  include_tasks:
+    file: "uncolor-irrelevant-critical-icons.yml"
+  when: "uncolor_irrelevant_critical_icons"
