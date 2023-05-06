@@ -18,3 +18,8 @@
   include_tasks:
     file: "uncolor-irrelevant-critical-icons.yml"
   when: "uncolor_irrelevant_critical_icons"
+
+- name: "Uncolor No Subscription Icon"
+  include_tasks:
+    file: "uncolor-no-subscription-icon.yml"
+  when: "uncolor_no_subscription_icon"
