@@ -10,15 +10,11 @@ jobs:
     name: Import
     runs-on: ubuntu-latest
     steps:
-      - name: Set up Python 3
-        uses: actions/setup-python@v2
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Push to Ansible Galaxy
+        uses: robertdebock/galaxy-action@1.2.1
         with:
-          python-version: '3.x'
-
-      - name: Install Ansible
-        run: pip3 install ansible-core
-
-      - name: Trigger a new import on Galaxy
-        run: >-
-          ansible-galaxy role import --api-key ${{ secrets.GALAXY_API_KEY }}
-          $(echo ${{ github.repository }} | sed 's/\// /g')
+          galaxy_api_key: ${{ secrets.GALAXY_API_KEY }}
+          git_branch: main
