@@ -21,7 +21,7 @@
 - name: "Add the Thermal State to the Summary"
   replace:
     path: "/usr/share/pve-manager/js/pvemanagerlib.js"
-    regexp: '\{\n\s*itemId:\s*''version'',\n\s*colspan:\s*2,\n\s*printBar:\s*false,\n\s*title:\s*gettext\(''PVE\s*Manager\s*Version''\),\n\s*textField:\s*''pveversion'',\n\s*value:\s*'''',\n\s*\},(\n.*?)+\],\n\s*\n\s*updateTitle: function\(\) \{\n'
+    regexp: '\{\n\s*itemId:\s*''version'',\n\s*colspan:\s*2,\n\s*printBar:\s*false,\n\s*title:\s*gettext\(''Manager\s*Version''\),\n\s*textField:\s*''pveversion'',\n\s*value:\s*'''',\n\s*\},(\n.*?)+\],\n\s*\n\s*updateTitle: function\(\) \{\n'
     replace: |
       {
       \t    itemId: 'version',
