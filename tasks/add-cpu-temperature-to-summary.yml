@@ -27,7 +27,7 @@
       \t    itemId: 'version',
       \t    colspan: 2,
       \t    printBar: false,
-      \t    title: gettext('PVE Manager Version'),
+      \t    title: gettext('Manager Version'),
       \t    textField: 'pveversion',
       \t    value: '',
       \t},
